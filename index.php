@@ -1,3 +1,4 @@
+<?php var_dump(file_exists(realpath(dirname(__DIR__) . '/app/functions/main.php'))) ?>
 <?php require_once realpath(dirname(__DIR__) . '/app/functions/main.php'); ?>
 <?php require_once realpath(dirname(__DIR__) . '/app/includes/head.php'); ?>
 <?php require_once realpath(dirname(__DIR__) . '/app/includes/header.php'); ?>
