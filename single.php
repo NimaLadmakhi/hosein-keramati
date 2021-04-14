@@ -1,6 +1,8 @@
-<?php require_once dirname(__DIR__) . '/app/functions/main.php' ?>
 <?php require_once dirname(__DIR__) . '/app/includes/head.php' ?>
+<?php require_once dirname(__DIR__) . '/app/functions/single.php' ?>
 <?php require_once dirname(__DIR__) . '/app/includes/header.php' ?>
+
+
 
 <div class="single">
     <div class="single__header">
