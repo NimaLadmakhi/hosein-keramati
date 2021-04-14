@@ -10,7 +10,7 @@ if (!isset($_GET['id'])) {
 
 $id = $_GET['id'];
 // $sql_command = "SELECT * FROM Products p JOIN Topics t ON p.topicId=t.id WHERE p.id = '$id'";
-$sql_command = "SELECT * FROM Products WHERE Products.id = '$id'";
+$sql_command = "SELECT * FROM Products WHERE id = '$id'";
 var_dump($sql_command);
 $productStatement = $connection->query($sql_command);
 var_dump($productStatement);
