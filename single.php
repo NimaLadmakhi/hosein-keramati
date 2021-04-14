@@ -1,6 +1,7 @@
-<?php require_once 'includes/head.php'  ?>
-<?php require_once 'functions/single.php' ?>
-<?php require_once 'includes/header.php' ?>
+<?php require_once dirname(__DIR__) . '/app/functions/main.php' ?>
+<?php require_once dirname(__DIR__) . '/app/includes/head.php' ?>
+<?php require_once dirname(__DIR__) . '/app/includes/header.php' ?>
+
 <div class="single">
     <div class="single__header">
         <h1 class="single__header-title">
@@ -54,4 +55,4 @@
     </div>
 </div>
 
-<?php require_once 'includes/end.php' ?>
+<?php require_once dirname(__DIR__) . '/app/includes/end.php' ?>
