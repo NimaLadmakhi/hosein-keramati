@@ -7,11 +7,16 @@ if (!isset($_GET['id'])) {
     exit;
 }
 
+var_dump("salam");
+
 $id = $_GET['id'];
 $sql_command = "SELECT * FROM Products p JOIN Topics t ON p.topicId=t.id WHERE p.id = '$id'";
 $productStatement = $connection->query($sql_command);
 $productStatement->execute();
 $product = $productStatement->fetchObject();
+
+var_dump("salam 2");
+
 
 $relateProductsSQL = "SELECT * FROM Products WHERE topicId=" . $product->topicId . " limit 5";
 $relateProductsCommand = $connection->query($relateProductsSQL);
