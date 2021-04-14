@@ -1,12 +1,6 @@
 <?php
 
-var_dump(file_exists(dirname(__DIR__) . '/functions/connect.php'));
-
-var_dump(file_exists("./connect.php"));
-
 require_once dirname(__DIR__) . '/functions/connect.php';
-
-var_dump("salam");
 
 $sql_command = "SELECT * FROM topics";
 $topicStatement = $connection->prepare($sql_command);
@@ -32,3 +26,5 @@ $sql_command = "SELECT * FROM blogs ORDER BY create_at DESC limit 8";
 $blogStatement = $connection->prepare($sql_command);
 $blogStatement->execute();
 $blogs = $blogStatement->fetchAll(PDO::FETCH_OBJ);
+
+var_dump($blogs);
