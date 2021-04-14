@@ -7,7 +7,6 @@ $topicStatement = $connection->prepare($sql_command);
 $topicStatement->execute();
 $topics = $topicStatement->fetchAll(PDO::FETCH_OBJ);
 
-var_dump("salam");
 
 $products = [];
 
@@ -19,6 +18,7 @@ foreach ($topics as $topicKey => $topic) {
     $products[$topic->name] = $obj;
 }
 
+var_dump("salam");
 $sql_command = "SELECT * FROM products ORDER BY create_at DESC limit 8";
 $recentlyStatement = $connection->prepare($sql_command);
 $recentlyStatement->execute();
