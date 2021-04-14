@@ -34,7 +34,7 @@
         <div class="swiper-wrapper">
             <?php foreach (array_values($products)[0] as $product) : ?>
                 <a href="single.php?id=<?= $product->id ?>" style="text-decoration: none;" class="swiper-slide products__item">
-                    <img class="products__image" src="<?= __DIR__ ?>/assets/images/<?= $product->image ?>" alt="" />
+                    <img class="products__image" src="./assets/images/<?= $product->image ?>" alt="" />
                     <h4 class="products__name">
                         <?= $product->title ?>
                     </h4>
