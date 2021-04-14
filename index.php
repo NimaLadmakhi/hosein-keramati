@@ -1,3 +1,4 @@
+<?php var_dump(dirname(__DIR__)) ?>
 <?php require_once dirname(__DIR__) . '/app/functions/main.php' ?>
 <?php require_once dirname(__DIR__) . '/app/includes/head.php' ?>
 <?php require_once dirname(__DIR__) . '/app/includes/header.php' ?>
