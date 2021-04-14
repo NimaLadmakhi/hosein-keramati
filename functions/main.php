@@ -11,14 +11,20 @@ $topics = $topicStatement->fetchAll(PDO::FETCH_OBJ);
 $products = [];
 
 foreach ($topics as $topicKey => $topic) {
+    var_dump($topic);
     $sql_command = "SELECT * FROM Products WHERE topicId = " . $topic->id;
+    var_dump($sql_command);
     $statement = $connection->prepare($sql_command);
+    var_dump($statement);
     $statement->execute();
     $obj = $statement->fetchAll(PDO::FETCH_OBJ);
+    var_dump($obj);
     $products[$topic->name] = $obj;
+    var_dump($products);
+
+    echo "<bre/><br/>";
 }
 
-var_dump("salam");
 $sql_command = "SELECT * FROM products ORDER BY create_at DESC limit 8";
 $recentlyStatement = $connection->prepare($sql_command);
 $recentlyStatement->execute();
