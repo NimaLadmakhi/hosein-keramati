@@ -1,9 +1,6 @@
-<?php require_once __DIR__ . '/functions/main.php'
-?>
-<?php require_once __DIR__ . '/includes/head.php'
-?>
-<?php require_once __DIR__ . '/includes/header.php'
-?>
+<?php require_once realpath(dirname(__DIR__) . '/app/functions/main.php'); ?>
+<?php require_once realpath(dirname(__DIR__) . '/app/includes/head.php'); ?>
+<?php require_once realpath(dirname(__DIR__) . '/app/includes/header.php'); ?>
 
 <!-- LANDING PAGE -->
 <div class="landing">
@@ -148,5 +145,4 @@
     </p>
 </footer>
 
-<?php require_once __DIR__ . '/includes/end.php'
-?>
+<?php require_once realpath(dirname(__DIR__) . '/app/includes/end.php'); ?>
