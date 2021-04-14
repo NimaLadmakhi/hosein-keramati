@@ -1,6 +1,6 @@
 <?php
 
-var_dump("START");
+var_dump(file_exists(realpath(__DIR__) . '/app/functions/connect.php'));
 require_once realpath(__DIR__) . '/app/functions/connect.php';
 
 var_dump("ONE");
