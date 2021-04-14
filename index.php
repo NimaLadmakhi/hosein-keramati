@@ -1,8 +1,8 @@
 <?php require_once dirname(__DIR__) . '/app/functions/main.php' ?>
+<?= "<p>HELLO WORLD</p>" ?>
 <?php require_once dirname(__DIR__) . '/app/includes/head.php' ?>
 <?php require_once dirname(__DIR__) . '/app/includes/header.php' ?>
 
-<?= "<p>HELLO WORLD</p>" ?>
 
 <!-- LANDING PAGE -->
 <div class="landing">
