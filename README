@@ -1,4 +1,5 @@
-msg1 = signup
-msg2 = login
-msg3 = create product
-msg4 = add to order
+Host: sql4.freesqldatabase.com
+Database name: sql4405633
+Database user: sql4405633
+Database password: CedfX8J5JS
+Port number: 3306
