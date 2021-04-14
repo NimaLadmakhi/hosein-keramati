@@ -1,5 +1,11 @@
-<?php require_once realpath(dirname(__DIR__) . '/functions/connect.php') ?>
+<?php
 
-<div>
-    <h1>Hello World</h1>
-</div>
+var_dump(__DIR__);
+
+echo "<br/>";
+
+var_dump(scandir(__DIR__));
+
+echo "<br/>";
+
+var_dump(file_exists(__DIR__ . 'functions/connect.php'));
