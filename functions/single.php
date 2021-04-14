@@ -1,6 +1,6 @@
 <?php
 
-require_once 'connect.php';
+require_once dirname(__DIR__) . '/functions/connect.php';
 
 if (!isset($_GET['id'])) {
     header("location: index.php");
