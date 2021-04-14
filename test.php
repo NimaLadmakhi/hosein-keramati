@@ -1,5 +1,6 @@
 <?php
 
+var_dump("START");
 require_once realpath(__DIR__) . '/app/functions/connect.php';
 
 var_dump("ONE");
