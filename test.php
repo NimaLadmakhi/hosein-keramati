@@ -1,13 +1,8 @@
 <?php
 
-require_once __DIR__ . '/functions/connect.php';
+require_once realpath(__DIR__) . '/app/functions/connect.php';
 
-var_dump(dirname(__DIR__));
-
-echo "<br/>";
-
-var_dump(scandir(__DIR__));
-
-echo "<br/>";
-
-var_dump(file_exists(__DIR__ . '/functions/connect.php'));
+$results = $connection->query("SELECT * FROM topics");
+$results->execute();
+$topics = $results->fetchAll(PDO::FETCH_OBJ);
+var_dump($topics);

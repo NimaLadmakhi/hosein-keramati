@@ -7,9 +7,6 @@ $topicStatement = $connection->prepare($sql_command);
 $topicStatement->execute();
 $topics = $topicStatement->fetchAll(PDO::FETCH_OBJ);
 
-var_dump("topics");
-var_dump($topics);
-
 exit;
 
 $products = [];
