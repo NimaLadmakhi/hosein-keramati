@@ -1,6 +1,6 @@
 <?php
 
-require_once 'connect.php';
+require_once __DIR__ . '/functions/connect.php';
 
 $sql_command = "SELECT * FROM topics";
 $topicStatement = $connection->prepare($sql_command);
