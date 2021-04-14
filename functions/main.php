@@ -20,7 +20,7 @@ foreach ($topics as $topicKey => $topic) {
 
 $sql_command = "SELECT * FROM products ORDER BY create_at DESC limit 8";
 $recentlyStatement = $connection->prepare($sql_command,);
-$recentlyStatement->execute("set names utf8");
+$recentlyStatement->execute();
 $recentlyProduct = $recentlyStatement->fetchAll(PDO::FETCH_OBJ);
 
 $sql_command = "SELECT * FROM blogs ORDER BY create_at DESC limit 8";
