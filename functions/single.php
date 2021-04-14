@@ -30,7 +30,7 @@ try {
     if (isset($userStatement->id)) {
         $customerId = $userStatement->id;
         $checkIsBuyBeforeSQL = "SELECT * FROM Orders WHERE productId = $id AND customerId = $customerId";
-        $checkIsBuyBeforeStatement = $connection->prepare($checkIsBuyBeforeSQL);
+        $checkIsBuyBeforeStatement = $connection->query($checkIsBuyBeforeSQL);
         $checkIsBuyBeforeStatement->execute();
         $checkIsBuyBefore = $checkIsBuyBeforeStatement->fetchObject();
     }
