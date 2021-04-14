@@ -1,9 +1,8 @@
 <?php
 
-var_dump(__DIR__);
-echo "<br/>";
-var_dump(dirname(__DIR__));
-require_once realpath(__DIR__) . '/app/functions/connect.php';
+var_dump(file_exists(dirname(__DIR__) . '/app/functions/connect.php'));
+
+require_once dirname(__DIR__) . '/app/functions/connect.php';
 
 var_dump("ONE");
 
