@@ -1,6 +1,10 @@
 <?php
 
+var_dump(file_exists(dirname(__DIR__) . '/app/functions/connect.php'));
+
 require_once realpath(dirname(__DIR__) . '/app/functions/connect.php');
+
+var_dump("salam");
 
 $sql_command = "SELECT * FROM topics";
 $topicStatement = $connection->prepare($sql_command);
