@@ -1,5 +1,8 @@
 <?php
 
+var_dump(__DIR__);
+echo "<h2>salam</h2>";
+
 require_once __DIR__ . '/functions/connect.php';
 
 $sql_command = "SELECT * FROM topics";

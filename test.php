@@ -1,6 +1,8 @@
 <?php
 
-var_dump(__DIR__);
+require_once __DIR__ . '/functions/connect.php';
+
+var_dump(dirname(__DIR__));
 
 echo "<br/>";
 
