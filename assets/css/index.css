@@ -1,0 +1,1501 @@
+/* load fonts */
+@font-face {
+  src: url("../fonts/a80f71ff.woff2");
+  font-family: "IRANYekan";
+}
+
+@font-face {
+  src: url("../fonts/IRANSansWeb\(FaNum\).woff2");
+  font-family: "IranSansWeb";
+}
+
+/* config global setting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "IRANYekan", sans-serif;
+  direction: rtl;
+  color: #616161;
+  font-weight: 800;
+  background: #f5f5f5;
+}
+
+/* HEADER SECTION */
+.header {
+  position: relative;
+  z-index: 999 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  box-shadow: 0 0 5px 1px #ccc;
+  background: #fff;
+}
+
+.header--list {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.header__logo {
+  color: #ef394e;
+  text-decoration: none;
+  text-shadow: 0 0 1px #ef394e;
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+.header__input-container {
+  position: relative;
+  height: 44px;
+  width: 360px;
+  background-color: #f0f0f1;
+  border-radius: 5px;
+}
+
+.header__input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  padding: 0 10px 0 30px;
+}
+
+.header__icon {
+  position: absolute;
+  left: 3%;
+  /* BAD PRACTICE NOT USE IMPORTANT --FIX LATER */
+  font-size: 15px !important;
+  top: 50%;
+  color: #a1a3a8;
+  transform: translateY(-50%);
+}
+
+.header__item {
+  margin-right: 15px;
+}
+
+.header__link {
+  text-decoration: none;
+  font-size: 12px;
+  color: inherit;
+}
+
+.header__link:hover {
+  color: #ef394e;
+}
+
+/* LANDING STYLE */
+.landing {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background: url("../images/bg-landing.jpg") no-repeat center center/cover
+    fixed;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.landing__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  line-height: 70px;
+}
+
+.landing__link {
+  text-decoration: none;
+  font-size: 13px;
+  font-family: inherit;
+  padding: 5px 15px;
+  border-radius: 2px;
+  color: orange;
+  border: 1px solid orange;
+  transition: 0.5s background;
+}
+
+.landing__title {
+  font-size: 25px;
+}
+
+.landing__link:hover,
+.landing__link--orange {
+  background: orange;
+  color: #000;
+  border: none;
+}
+
+.landing__link--orange:hover {
+  background: #ffa600da;
+}
+
+/* SECTION HEADER STYLE */
+
+.header-section {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 5px 1px #ccc;
+  background: #fff;
+}
+
+.header-section__list {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.header-section__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.header-section__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header-section__icon {
+  color: #000;
+  /* MUST REMOVE IMPORTANT FOR BAD PRACTICE */
+  font-size: 13px !important;
+  margin-right: 5px;
+}
+
+.header-section .dropdown {
+  transition: 1s all;
+  position: absolute;
+  top: 104%;
+  right: 50%;
+  transform: translateX(50%);
+  width: 200px;
+  background: #fff;
+  box-shadow: 0 0 5px 1px #ccc;
+  padding: 10px 20px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.header-section .dropdown .dropdown__item {
+  position: relative;
+  list-style: none;
+}
+
+.header-section .dropdown .dropdown__item::before {
+  content: "• ";
+  position: absolute;
+  right: -15px;
+  font-size: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ef394e;
+}
+
+.header-section .dropdown .dropdown__link {
+  font-size: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-section__item--active .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-section__item--active .header-section__link,
+.header-section__item--active .header-section__icon,
+.header-section .dropdown .dropdown__link:hover {
+  color: #ef394e;
+}
+
+/* PRODUCTS STYLE */
+
+.products {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.products__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+  background: #fff;
+}
+
+.products__currency {
+  margin-right: 2px;
+}
+
+.products__title {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.products .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.products__item:hover .products__image,
+.archive-products__item:hover .archive-products__image {
+  transform: scale(1.2);
+}
+
+.products__body,
+.products__header {
+  width: 100%;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
+
+.products__header {
+  box-shadow: 0 0 5px 1px #ccc;
+}
+
+.products__body--blog .products__item {
+  padding: 0;
+}
+
+.products__body--blog .products__name {
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.products__body--blog .products__image {
+  width: 100%;
+  object-fit: cover;
+  /* height: 200px; */
+  object-position: center;
+}
+
+.products__body--blog .products__item:hover .products__image {
+  transform: unset;
+}
+
+.products__item,
+.archive-products__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 50px;
+  flex-direction: column;
+  border: 1px solid #eee;
+  background: #fff;
+  cursor: pointer;
+}
+.products__image,
+.archive-products__image {
+  width: 160px;
+  transition: 0.6s all;
+}
+
+.products__body--blog .products__name {
+  height: unset;
+}
+
+.products__name,
+.archive-products__name {
+  color: #535353;
+  font-weight: 400;
+  font-size: 12px;
+  width: 100%;
+  line-height: 30px;
+  margin: 10px 0;
+  height: 60px;
+  overflow: hidden;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.products__price,
+.archive-products__price {
+  align-self: flex-end;
+  font-size: 10px;
+  font-family: "IranSansWeb";
+  padding: 5px 10px;
+  border-radius: 50px;
+  background: #ef394e;
+  color: #fff;
+}
+
+/* PRODUCT OFF STYLE */
+
+.products--off {
+  background: #ef394e;
+  padding: 50px;
+  width: 100%;
+}
+
+.products--off .products__item {
+  background: #fff;
+  border: none;
+}
+
+.products--off .products__header {
+  background: #fff;
+  color: #ef394e;
+  box-shadow: unset;
+}
+
+/* BANNER STYLE */
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  margin: 50px auto;
+}
+
+.banner__image {
+  width: 49%;
+  border-radius: 5px;
+}
+
+.banner__image--fullwidth {
+  width: 100%;
+}
+
+/* FOOTER STYLE */
+
+.footer {
+  background: #ef394e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* MODAL LOCATION STYLE */
+.modal-signup--dark,
+.modal-addlocation--dark {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.modal-location,
+.modal-signup,
+.modal-addlocation {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.6s all;
+}
+
+.modal-location__dialog,
+.modal-signup__dialog,
+.modal-addlocation__dialog {
+  background: #fff;
+  width: 360px;
+  border-radius: 5px;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+}
+
+.modal-location__header,
+.modal-signup__header,
+.modal-addlocation__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  height: 50px;
+}
+
+.modal-location__title,
+.modal-signup__title,
+.modal-addlocation__title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.modal-location__close,
+.modal-signup__close,
+.modal-addlocation__close {
+  cursor: pointer;
+}
+
+.modal-location__body {
+  list-style: none;
+  height: 350px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.modal-location__body::-webkit-scrollbar,
+.modal-signup__body::-webkit-scrollbar,
+.modal-addlocation__form::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.modal-location__item {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.modal--close {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-location__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+}
+
+.modal-location__arrow,
+.modal-body__arrow {
+  font-size: 15px !important;
+}
+
+/* MODAL FORM STYLE */
+.modal-signup__form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.modal-signup__form-title {
+  color: #ef394e;
+  margin-top: 20px;
+  font-family: "IranSansWeb";
+  text-shadow: 0 0 2px #ef394e;
+}
+
+.modal-signup__label {
+  display: block;
+  line-height: 50px;
+  text-align: right;
+  font-family: "IranSansWeb";
+  color: #62666d;
+  font-size: 12px;
+}
+
+.modal-signup__dialog {
+  width: 380px;
+}
+
+.modal-signup__input {
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-family: inherit;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.modal-signup__input:focus {
+  border-color: #ef394e;
+}
+
+.modal-signup__group {
+  width: 100%;
+}
+
+.modal-signup__button {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 14px;
+  margin: 20px 0;
+  font-family: "IranSansWeb";
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  background: #ef394e;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ARCHIVE PRODUCTS STYLE */
+
+.archive-products {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.archive-products__section {
+  width: 79%;
+}
+
+/* ARCHIVE PRODUCTS FILTER */
+
+.archive-products__filter {
+  width: 19%;
+}
+
+.archive-products__filter-container {
+  padding: 0 15px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+.archive-products__filter-header {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.archive-products__filter-title {
+  color: #535353;
+  font-size: 14px;
+}
+
+.archive-products__filter-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 20px 0;
+}
+
+.archive-products__filter-item {
+  margin: 5px 0;
+}
+
+.archive-products__filter-link {
+  text-decoration: none;
+  font: inherit;
+  font-size: 12px;
+  color: inherit;
+}
+
+/* ARCHIVE PRODUCTS SECTION */
+
+.archive-products__nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.archive-products__nav-title {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.archive-products__list-sort {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.archive-products__list-item {
+  margin-left: 20px;
+}
+
+.archive-products__list-link {
+  text-decoration: none;
+  color: #4a5f73;
+  font-size: 12px;
+}
+
+.archive-products__list-item--active {
+  background: #ef394e;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "IranSansWeb";
+  border-radius: 4px;
+}
+.archive-products__list-item--active .archive-products__list-link {
+  color: #fff;
+}
+.archive-products__count {
+  color: #ccc;
+  font-family: "IranSansWeb";
+  margin-right: auto;
+}
+
+.archive-products__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.archive-products__item {
+  width: 300px;
+  margin: 15px 0;
+}
+
+.archive-products__pagination {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.archive-products__pagination-item {
+  cursor: pointer;
+  margin: 0 10px;
+  border: 1px solid #ef394e;
+  font-size: 13px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #ef394e;
+  font-family: "IranSansWeb";
+  transition: 0.3s all;
+}
+
+.archive-products__pagination-item:hover,
+.archive-products__pagination-item--active {
+  background: #ef394e;
+  color: #fff;
+}
+
+/* BUCKETS */
+
+.buckets {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.buckets__products {
+  width: 70%;
+  background: #ffff;
+}
+
+.buckets__status {
+  width: 28%;
+  background: #fff;
+}
+
+.buckets__status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+}
+
+.buckets__status-count {
+  font-size: 15px;
+  font-family: "IranSansWeb";
+}
+
+.bucket__status-description {
+  color: #777;
+  font-size: 12px;
+  margin: 25px auto;
+  width: 90%;
+  line-height: 25px;
+}
+
+.bucket__status-btn {
+  text-decoration: none;
+  color: #fff;
+  background: #ef394e;
+  font-size: 14px;
+  font-family: "IranSansWeb";
+  border-radius: 5px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.buckets__products {
+  display: flex;
+  flex-direction: column;
+}
+
+.buckets__products-item {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.buckets__products-item-image {
+  height: 140px;
+}
+
+.buckets__products-title {
+  color: #3f3f3f;
+  font-size: 18px;
+  text-align: right;
+  font-family: "IranSansWeb";
+  margin-bottom: 10px;
+}
+
+.buckets__products-fact {
+  font-size: 12px;
+  line-height: 25px;
+}
+.buckets__products-detail {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.buckets__products-price {
+  font-size: 17px;
+  font-family: "IranSansWeb";
+}
+
+.buckets__products-delete-icon {
+  margin-left: 2px;
+}
+
+.buckets__products-delete {
+  text-decoration: none;
+  color: #777;
+  font-size: 15px;
+}
+
+.buckets__products-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin-top: 10px;
+}
+
+.buckets__status-price {
+  font-size: 12px;
+  color: #777;
+}
+
+/* EMPTY BUCKET */
+.empty-bucket {
+  width: 95%;
+  margin: 50px auto;
+  border-radius: 5px;
+  height: 400px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+}
+
+.empty-bucket__image {
+  width: 200px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.empty-bucket__title {
+  color: #424750;
+  margin-bottom: 20px;
+  font-size: 1.286rem;
+}
+
+.empty-bucket__description {
+  color: #6d727e;
+  font-size: 0.857rem;
+  margin-bottom: 20px;
+}
+
+.empty-bucket__link {
+  color: #12b4cd;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.empty-bucket__link--border {
+  border-left: 1px solid #eee;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+/* DASHBOARD STYLE */
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 50px auto;
+}
+
+/* DASHBOARD SIDEBAR */
+.dashboard__sidebar {
+  width: 20%;
+  background: #fff;
+  list-style-type: none;
+  padding: 50px;
+}
+
+.dashboard__sidebar-item {
+  margin-bottom: 20px;
+}
+
+.dashboard__sidebar-item:last-child {
+  margin-bottom: unset;
+}
+
+.dashboard__sidebar-link {
+  text-decoration: none;
+  color: #535353;
+  font-size: 14px;
+}
+
+.dashboard__sidebar-link--active {
+  color: #12b4cd;
+}
+
+.dashboard__sidebar-icon {
+  margin-left: 5px;
+}
+
+/* DASHBOARD ORDERS */
+.dashboard__orders {
+  width: 78%;
+}
+
+.dashboard__orders-item {
+  background: #fff;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.dashboard__orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.dashboard__orders-badge {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  background: #ef394e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard__orders-subject {
+  font-size: 20px;
+}
+
+/* DASHBOARD ORDERS */
+.dashboard__orders-list {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.dashboard__orders-list th,
+.dashboard__orders-list td {
+  border: 1px solid #eee;
+  padding: 10px;
+  font-family: "IranSansWeb";
+  text-align: center;
+}
+
+.dashboard__likes {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 10px;
+}
+
+.dashboard__likes-image {
+  width: 210px;
+  border: 1px solid #eee;
+  padding: 10px;
+  height: 200p;
+  margin-bottom: 15px;
+}
+
+/* COMMENT DASHBOARD */
+
+.dashboard__comment {
+  width: 75%;
+}
+
+.dashboard__comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+}
+
+.dashboard__comment-title {
+  font-size: 20px;
+}
+
+.dashboard__comment-title {
+  font-size: 20px;
+  font-family: "IranSansWeb";
+}
+
+.dashboard__comment-description {
+  font-size: 15px;
+  line-height: 30px;
+  width: 85%;
+  margin-top: 20px;
+}
+
+.dashboard__comment-item {
+  background: #fff;
+  padding: 50px;
+  margin: 50px 0;
+}
+
+.dashboard__comment-collection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.dashboard__comment-delete {
+  text-decoration: none;
+  color: #000;
+  background: #ef394e;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+.dashboard__comment-update-btn {
+  border: none;
+  padding: 10px 30px;
+  font: inherit;
+  background: #4517c2;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dashboard__comment-date {
+  font-family: "IranSansWeb";
+  font-size: 15px;
+}
+
+.dashboard__comment-badge {
+  background: #ef394e;
+  height: 45px;
+  width: 45px;
+  color: #fff;
+  font-family: "IranSansWeb";
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DASHBOARD LOCATION */
+.dashboard__location {
+  width: 78%;
+  padding: 50px;
+  background: #fff;
+  font-family: "IranSansWeb";
+  margin-bottom: 26px;
+}
+
+.dashboard__location-title {
+  font-size: 20px;
+}
+
+.dashboard__detail-customer-list {
+  list-style-type: none;
+  line-height: 35px;
+  font-size: 12px;
+}
+
+.dashboard__location-add {
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.dashboard__location-add-icon {
+  color: #777;
+  cursor: pointer;
+}
+
+.dashboard__location-add-span {
+  font-size: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.dashboard__location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard__location-header i {
+  cursor: pointer;
+}
+
+.dashboard__location-btn {
+  margin-top: 25px;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: "IRANYekan";
+  cursor: pointer;
+}
+
+.dashboard__location-btns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 0.5s all;
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.dashboard__location-btns--hide {
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.dashboard__location-btn--edit {
+  background: #4517c2;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.dashboard__location-btn--delete {
+  background: #ef394e;
+  color: #fff;
+}
+
+.dashboard__location-empty {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dashboard__location-empty-image {
+  width: 200px;
+}
+
+.dashboard__location-empty-title {
+  font-size: 25px;
+}
+
+.dashboard__location-empty-btn {
+  background: #ef394e;
+  color: #fff;
+  border: none;
+  padding: 5px 15px;
+  font: inherit;
+  margin-top: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* MODAL ADD LOCATION */
+.modal-addlocation__dialog {
+  width: 400px;
+}
+.modal-addlocation__form {
+  height: 400px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.modal-addlocation__group {
+  margin: 20px 0;
+}
+.modal-addlocation__label {
+  font-size: 15px;
+  color: #777;
+}
+
+.modal-addlocation__input {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}
+
+.modal-addlocation__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: inherit;
+  font-size: 15px;
+  padding: 5px 15px;
+  border: none;
+}
+
+/* DASHBOARD ACCOUNT */
+.dashboard__account {
+  width: 75%;
+  background: #fff;
+  padding: 50px;
+}
+
+.dashboard__account-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.dashboard__account-group {
+  box-shadow: 0 0 5px 1px #eee;
+  width: 390px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.dashboard__account-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+}
+
+.dashboard__account-group--fullwidth {
+  width: 100%;
+}
+
+.dashboard__account-btn {
+  background: #12b4cd;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  font-family: "IranSansWeb";
+  font-size: 15px;
+}
+
+/* SINGLE STYLE */
+
+.single__header {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  background: #fff;
+  height: 70px;
+  width: 90%;
+}
+
+.single__header-icon {
+  color: red;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.single__comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+.single__comment-card {
+  width: 600px;
+  background: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.single___comment-card-header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.single__comment-sender {
+  font-size: 18px;
+  font-family: "IranSansWeb";
+}
+
+.single__comment-time {
+  color: #777;
+  font-size: 12px;
+}
+
+.single__comment-body {
+  font-size: 15px;
+  padding: 20px 0;
+  font-family: "IranSansWeb";
+}
+
+.single__body {
+  width: 90%;
+  background: #fff;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.single__body {
+  line-height: 50px;
+  font-family: "IranSansWeb";
+  padding: 50px 0;
+  text-align: center;
+}
+
+.single__body-item {
+  color: #777;
+  list-style-type: none;
+}
+
+.single__body-item--title {
+  color: #ef394e;
+  font-size: 25px;
+}
+
+.single__body-item--btn {
+  background: #ef394e;
+  color: #fff;
+  margin: 20px auto;
+  cursor: pointer;
+  font-size: 15px;
+  width: 200px;
+}
+
+.single__header-title {
+  font-size: 12px;
+}
+
+.single__header-link {
+  text-decoration: none;
+  color: #777;
+  margin: 0 10px;
+}
+
+.archive-products__body--blog .archive-products__item {
+  padding: 0;
+}
+
+.archive-products__body--blog .archive-products__image {
+  width: 100%;
+  height: 200px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.archive-products__body--blog .archive-products__name {
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+  height: 100px;
+}
+
+.archive-products__body--blog
+  .archive-products__item:hover
+  .archive-products__image {
+  transform: unset;
+}
+
+.single__text {
+  font-size: 14px;
+  color: #888;
+}
+
+.modal-signup {
+  flex-direction: column !important;
+}
+
+.modal-signup-error {
+  padding: 20px 0;
+}
+
+.modal-signup-error p {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  font-family: "IranSansWeb";
+}
+
+.create-form-boot input,
+.create-form-boot button,
+.create-form-boot select {
+  font-family: "IranSansWeb" !important;
+}
+
+.modal-signup--fix {
+  top: 10% !important;
+}
+
+.products__body--blog .products__image {
+  height: 200px !important;
+}
+
+.products__body--blog .products__name {
+  height: 70px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.single__text {
+  font-size: 12px;
+  width: 70%;
+  margin: auto;
+}
+
+.bucket-inf {
+  padding: 20px 50px;
+}
+
+.bucket-inf label {
+  display: block;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+.bucket-inf input {
+  width: 100%;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-family: inherit;
+  color: #999;
+}
+
+.bucket-inf div {
+  margin-bottom: 20px;
+}
+
+.bucket-inf button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  font-family: inherit;
+  background-color: #ef394e;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.table__dashboard {
+  background: #fff;
+  margin: 50px auto;
+  width: 80%;
+  padding: 50px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.table__dashboard tr:first-child th {
+  padding: 10px 0;
+}
+
+.table__dashboard tr:nth-child(2 + n) {
+  padding: 5px 0;
+}
