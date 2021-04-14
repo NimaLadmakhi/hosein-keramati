@@ -1,8 +1,8 @@
 <?php
 
-var_dump(__DIR__);
+var_dump(dirname(__DIR__));
 
-require_once realpath(dirname(__DIR__) . '/app/functions/connect.php');
+require_once "./connect.php";
 
 var_dump("salam");
 
