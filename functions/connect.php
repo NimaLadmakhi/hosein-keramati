@@ -1,5 +1,10 @@
 <?php
 
+// Host: sql4.freesqldatabase.com
+// Database name: sql4405633
+// Database user: sql4405633
+// Database password: CedfX8J5JS
+// Port number: 3306
 
 try {
     $connection = new PDO("mysql:host=sql4.freesqldatabase.com;dbname=sql4405633;", "sql4405633", "CedfX8J5JS");
