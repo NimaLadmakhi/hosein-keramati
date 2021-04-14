@@ -7,6 +7,8 @@ $topicStatement = $connection->prepare($sql_command);
 $topicStatement->execute();
 $topics = $topicStatement->fetchAll(PDO::FETCH_OBJ);
 
+var_dump("salam");
+
 $products = [];
 
 foreach ($topics as $topicKey => $topic) {
@@ -26,5 +28,3 @@ $sql_command = "SELECT * FROM blogs ORDER BY create_at DESC limit 8";
 $blogStatement = $connection->prepare($sql_command);
 $blogStatement->execute();
 $blogs = $blogStatement->fetchAll(PDO::FETCH_OBJ);
-
-var_dump($blogs);
