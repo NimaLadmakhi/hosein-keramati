@@ -12,11 +12,12 @@ $products = [];
 
 foreach ($topics as $topicKey => $topic) {
     var_dump($topic);
-    $sql_command = "SELECT * FROM Products WHERE topicId = " . $topic->id;
+    $sql_command = "SELECT * FROM products WHERE topicId = " . $topic->id;
     var_dump($sql_command);
-    $statement = $connection->prepare($sql_command);
+    $statement = $connection->query($sql_command);
     var_dump($statement);
     $statement->execute();
+    // $statement = $statement->get_results();
     $obj = $statement->fetchAll(PDO::FETCH_OBJ);
     var_dump($obj);
     $products[$topic->name] = $obj;
