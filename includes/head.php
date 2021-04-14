@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>فروشگاه آنلاین</title>
     <!-- load css files -->
-    <link rel="stylesheet" href="<?= dirname(__DIR__) ?>/app/assets/css/index.css" />
-    <?php var_dump(dirname(__DIR__)) ?>
+    <link rel="stylesheet" href="<?= dirname(__DIR__) ?>/assets/css/index.css" />
     <!-- load icons -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- load fonts -->
