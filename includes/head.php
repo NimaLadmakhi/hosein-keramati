@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>فروشگاه آنلاین</title>
     <!-- load css files -->
-    <?php file_exists(dirname(__DIR__) . "/assets/css/index.css") ?>
+    <?php var_dump(file_exists(dirname(__DIR__) . "/assets/css/index.css")) ?>
     <?php echo "<br/>" ?>
     <?php var_dump(dirname(__DIR__) . "/assets/css/index.css") ?>
     <link rel="stylesheet" href="<?= dirname(__DIR__) ?>/assets/css/index.css" />
