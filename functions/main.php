@@ -1,8 +1,10 @@
 <?php
 
-var_dump(dirname(__DIR__));
+var_dump(file_exists(dirname(__DIR__) . '/functions/connect.php'));
 
-require_once "./connect.php";
+var_dump(file_exists("./connect.php"));
+
+require_once dirname(__DIR__) . '/functions/connect.php';
 
 var_dump("salam");
 
