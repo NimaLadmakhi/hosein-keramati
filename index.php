@@ -1,3 +1,8 @@
+<?php
+var_dump(scandir(__DIR__));
+?>
+
+
 <div class="landing">
     <div class="landing__content">
         <h1 class="landing__title">
